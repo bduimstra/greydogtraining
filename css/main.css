@@ -253,7 +253,21 @@ header a:focus {
 
 .main > article p {
 	font-size: 1em;
+	font-size: 4vw;
 	margin-top: 1.618em;
+}
+
+.main > article > a {
+	color: #fff;
+	display: inline-block;
+	font-size: 1em;
+	font-size: 4vw;
+	margin: 0.382em 0;
+	text-decoration: none;
+}
+
+.main > article > a:hover {
+	text-decoration: underline;
 }
 
 .main > .content {
