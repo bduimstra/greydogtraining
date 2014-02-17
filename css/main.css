@@ -107,64 +107,255 @@ textarea {
 	red: #C44741
 */
 
+p,
+h1,
+h2,
+h3,
+ul,
+li {
+	padding: 0;
+	margin: 0;
+}
+
 header,
+nav,
+ul,
+li,
+a,
+img,
 section,
 article,
 div,
 footer {
 	box-sizing: border-box;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
 	position: relative;
 }
 
+html,
 body {
-	background: #2C343B;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+body {
+	background-color: #52616D;
+}
+
+nav {
+	background-color: #2C343B;
+	height: 80px;
+	width: 100%;
+	z-index: 1;
+}
+
+nav ul {
+	border-top: 1px dashed #52616D;
+	box-shadow: 5px 5px 50px -7px rgba(0, 0, 0, 0.3);
+	clear: both;
+	display: none;
+	list-style: none;
+	position: relative;
+	width: 100%;
+}
+
+nav ul li {
+	background-color: rgba(44, 52, 59, 0.85);
+	border-bottom: 1px solid #52616D;
+	width: 100%;
+	-moz-transition: all 200ms linear;
+	-ms-transition: all 200ms linear;
+	-o-transition: all 200ms linear;
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+
+nav ul li:hover {
+	background-color: #2C343B;
+}
+
+
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited,
+nav ul li a:hover,
+nav ul li a:focus {
+	color: #fff;
+	display: inline-block;
+	padding: 1em;
+	text-decoration: none;
+	width: 100%;
+}
+
+.mobile-nav {
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font-size: 2.5em;
+	line-height: 80px;
+	margin: 0 0 0 0.382em;
+}
+
+nav img {
+	float: right;
+	height: 100%;
+	padding: 0.618em;
 }
 
 header {
-	background: #E5E1D1;
-	box-shadow: 5px 5px 50px -7px #000;
+	padding: 1.618em;
+	text-align: center;
+}
+
+header h1 {
+	color: #fff;
+	font-size: 1.7em;
+	font-weight: 400;
+	margin-bottom: 0.618em;
+	width: 100%;
+}
+
+header a,
+header a:link,
+header a:visited,
+header a:hover,
+header a:focus {
+	color: #000;
+	text-decoration: none;
+}
+
+.main img {
+	background-color: #fff;
+	padding: 1em;
+	width: 100%;
+}
+
+.main > article {
+	color: #fff;
+	padding: 3em;
+}
+
+.main > article h2 {
+	border-bottom: 1px solid #979797;
+	font-weight: 400;
+	padding: 0.382em 0;
+	text-align: center;
+	width: 100%;
+}
+
+.main > article h3 {
+	font-weight: 400;
+	margin-top: 1em;
+	text-align: center;
+}
+
+.main > article p {
+	font-size: 1em;
+	margin-top: 1.618em;
+}
+
+.main > .content {
+	background: #fff;
+	width: auto;
+}
+
+.main > .content section {
+	margin-bottom: 4em;
+}
+
+.main > .content h3 {
+	color: #C44741;
+	font-size: 1.2em;
+	font-weight: 400;
+	text-align: center;
+}
+
+.main > .content p {
+	color: #333;
+}
+
+.prices {
+	font-weight: 700;
+	text-align: center;
+}
+
+.purchase {
+	border-bottom: 1px dashed #52616D;
+	padding: 1.2em 0 0.5em 0;
+	text-align: center;
+}
+
+.purchase select {
+	background-color: #fff;
+	border: 1px solid #979797;
+	border-radius: 4px;
+	box-shadow: inset 1px 1px 3px #999;
+	min-width: 100px;
+	padding: 0.382em;
+	width: 20%;
+}
+
+.purchase input[type='submit'] {
+	background-color: #D8D8D8;
+	border: 1px solid #979797;
+	border-radius: 4px;
+	min-width: 100px;
+	padding: 0.382em;
+	width: 20%;
+	-moz-transition: all 100ms linear;
+	-ms-transition: all 100ms linear;
+	-o-transition: all 100ms linear;
+	-webkit-transition: all 100ms linear;
+	transition: all 100ms linear;
+}
+
+.purchase input[type='submit']:hover,
+.purchast input[type='submit']:focus {
+	background-color: #52616D;
+	color: #fff;
+}
+
+.main p.sub-text {
+	color: #999;
+	font-size: 0.8em;
+	font-style: italic;
+	text-align: center;
+}
+
+.sub-text a,
+.sub-text a:link,
+.sub-text a:visited,
+.sub-text a:hover,
+.sub-text a:focus {
+	color: #333;
+}
+
+.sub-header {
+	font-weight: 700;
+	margin-bottom: -1em;
+	text-align: center;
+}
+
+article > p > a {
+	color: #333;
+	word-wrap: break-word;
+}
+
+footer {
+	background-color: #2C343B;
 	height: 50px;
 	width: 100%;
 }
 
-header h1,
-header ul {
-	float: left;
-}
-
-header h1 {
-	font-weight: normal;
-	line-height: 50px;
-	margin: 0 0 0 0.5em;
-	padding: 0;
-}
-
-header ul {
-	list-style: none;
-}
-
-header ul li {
+footer > small {
+	color: #fff;
 	display: inline-block;
-	padding: 0 1em;
+	line-height: 50px;
+	text-align: center;
+	width: 100%;
 }
-
-header ul li a,
-header ul li a:link,
-header ul li a:visited,
-header ul li a:hover,
-header ul li a:focus {
-	color: #2C343B;
-	text-decoration: none;
-}
-
-
-
-
-
-
-
-
 
 
 
