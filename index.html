@@ -15,6 +15,15 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/main.css">
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+		  	var socket = io.connect(window.location);
+		  	socket.on('changed', function() {
+		    	window.location.reload();
+		  	});
+		</script>
+		
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -26,10 +35,10 @@
 			<img src="header-logo.png" alt="Grey Dog Training" />
 
 			<ul>
-				<li><a href="#training" title="Training">Training</a></li>
-				<li><a href="#about" title="About">About</a></li>
-				<li><a href="#philosophy" title="Philosophy">Philosophy</a></li>
-				<li><a href="#links" title="Links">Links</a></li>
+				<li><a href="#training" title="Training" data-link="Training">Training</a></li>
+				<li><a href="#about" title="About" data-link="About">About</a></li>
+				<li><a href="#philosophy" title="Philosophy" data-link="Philosophy">Philosophy</a></li>
+				<li><a href="#links" title="Links" data-link="Links">Links</a></li>
 			</ul>
 		</nav>
 
@@ -41,7 +50,10 @@
 				<a href="tel:+4257805734">425.780.5734</a>
 			</header>
 
-			<img src="gatsby2.jpg" alt="Grey Dog Training" />
+			<div class="images clearfix">
+				<img src="gatsby2.jpg" alt="Grey Dog Training" />
+				<img src="gatsby2.jpg" alt="Grey Dog Training" />
+			</div>
 
 			<article id="training">
 				<h2>In-home Private Training</h2>
@@ -49,7 +61,7 @@
 				<p>Daytime, evening, and weekend hours available.</p>
 			</article>
 
-			<article class="content">
+			<article class="content clearfix">
 				<section>
 					<h3>New Puppy Fundamentals<br />(8 weeks to 5 months)</h3>
 
